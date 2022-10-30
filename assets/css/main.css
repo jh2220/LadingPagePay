@@ -1,13 +1,70 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 
 body {
-  background: #0099ff;
   padding: 0;
   margin: 0;
 
   font-family: "DM Sans", Bold;
   font-size: 18px;
   color: #4c4c4c;
+}
+
+.defaultHeadTitle {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  font-weight: bold;
+  font-size: 57px;
+  max-width: 560px;
+}
+
+.defaultTinyTitle {
+  font-size: 16px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.defaultDivisionTitle {
+  display: flex;
+  justify-content: space-around;
+  max-width: 560px;
+}
+
+.defaultDivisionRightTitle {
+  color: #4c4c4c;
+  font-size: 18px;
+  width: 320px;
+  margin-top: 20px;
+}
+
+.defaultDivisionLeftTitle {
+  color: #1a1a1a;
+  font-size: 16px;
+  margin-top: 24px;
+  font-weight: bold;
+}
+
+.defaultLinkTitle {
+  display: flex;
+  width: 360px;
+  padding-left: 200px;
+}
+
+.defaultLinkTitle > a {
+  display: flex;
+  align-items: center;
+  color: #1a1a1a;
+  font-size: 16px;
+  margin-top: 34px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.defaultLinkTitle > a > img {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 8px;
 }
 
 .spaaace {
