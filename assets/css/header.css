@@ -1,0 +1,49 @@
+#mainHeader {
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  height: 100px;
+}
+
+#headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1920px;
+}
+
+#headerContainer > img {
+  width: 265px;
+}
+
+#headerContainer > ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+#headerContainer > ul > li {
+  margin-right: 56px;
+}
+
+#headerContainer > ul > li > a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+#headerContainer > ul > li > a > p {
+  font-size: 16px;
+  margin: 0px;
+}
+
+.tinyText {
+  font-size: 10px;
+}
+
+#headerContainer > ul > li > a:hover {
+  color: #000000;
+  transition: 0.7s;
+}
