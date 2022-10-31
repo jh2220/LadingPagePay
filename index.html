@@ -53,25 +53,25 @@
 
         <ul>
           <li>
-            <a href="#">
+            <a href="#showcase" id="menuItemHome">
               <span class="tinyText">01.</span>
               <p>home</p>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#users" id="menuItemClients">
               <span class="tinyText">02.</span>
               <p>Quem usa?</p>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#variation" id="menuItemVariant">
               <span class="tinyText">03.</span>
               <p>Diferenciais</p>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#footer" id="menuItemContact">
               <span class="tinyText">04.</span>
               <p>Contato</p>
             </a>
@@ -82,7 +82,7 @@
     <!-- HEADER ============================================================================== -->
 
     <!-- 01. showcase ============================================================================== -->
-    <section>
+    <section id="showcaseSection">
       <div id="showcase">
         <span class="showcaseBlackScreen"></span>
 
@@ -119,7 +119,7 @@
     <!-- 01.2 showcase ============================================================================== -->
 
     <!-- 02. users ================================================================================== -->
-    <section>
+    <section id="usersSection">
       <div id="users">
         <h2 id="usersTitle">Quem usa?</h2>
 
@@ -239,14 +239,43 @@
     <!-- 02.2 users ================================================================================= -->
 
     <!-- 03 vairation =============================================================================== -->
-    <section id="variation">
-      <div id="variationRow">
-        <div id="variationText">
+    <section id="variationSection">
+      <div id="variation">
+        <div id="variationRow">
+          <div id="variationText">
+            <h2 class="defaultHeadTitle">
+              <span class="defaultTinyTitle">03.</span> Agilidade na mão.
+            </h2>
+            <div class="defaultDivisionTitle">
+              <p class="defaultDivisionLeftTitle">Aplicativo</p>
+              <p class="defaultDivisionRightTitle">
+                Quisque eget velit. Duis vitae semper augue. Orci nulla magna,
+                arcu diam inceptos lupus ut quis nibh eu.
+              </p>
+            </div>
+            <div class="defaultLinkTitle">
+              <a href="#">
+                <img src="assets/img/playStore.png" />
+              </a>
+              <a href="#">
+                <img src="assets/img/appleStore.png" />
+              </a>
+            </div>
+          </div>
+
+          <span id="variationPhoneDotted"></span>
+          <img id="variationPhoneApp" src="assets/img/celulardeitado.png" />
+          <img id="variationPhoneCloud" src="assets/img/celularnuvem.png" />
+        </div>
+      </div>
+
+      <div id="variantSubText">
+        <div id="variantSubTextInfo">
           <h2 class="defaultHeadTitle">
-            <span class="defaultTinyTitle">03.</span> Agilidade na mão.
+            <span class="defaultTinyTitle">04.</span> Tudo na nuvem.
           </h2>
           <div class="defaultDivisionTitle">
-            <p class="defaultDivisionLeftTitle">Aplicativo</p>
+            <p class="defaultDivisionLeftTitle">Cloud Safe</p>
             <p class="defaultDivisionRightTitle">
               Quisque eget velit. Duis vitae semper augue. Orci nulla magna,
               arcu diam inceptos lupus ut quis nibh eu.
@@ -254,34 +283,9 @@
           </div>
           <div class="defaultLinkTitle">
             <a href="#">
-              <img src="assets/img/playStore.png" />
-            </a>
-            <a href="#">
-              <img src="assets/img/appleStore.png" />
+              Cadastre-se <img src="assets/img/arrow-right.svg" />
             </a>
           </div>
-        </div>
-
-        <span id="variationPhoneDotted"></span>
-        <img id="variationPhoneApp" src="assets/img/celulardeitado.png" />
-        <img id="variationPhoneCloud" src="assets/img/celularnuvem.png" />
-      </div>
-    </section>
-
-    <section id="variantSubText">
-      <div id="variantSubTextInfo">
-        <h2 class="defaultHeadTitle">
-          <span class="defaultTinyTitle">04.</span> Tudo na nuvem.
-        </h2>
-        <div class="defaultDivisionTitle">
-          <p class="defaultDivisionLeftTitle">Cloud Safe</p>
-          <p class="defaultDivisionRightTitle">
-            Quisque eget velit. Duis vitae semper augue. Orci nulla magna, arcu
-            diam inceptos lupus ut quis nibh eu.
-          </p>
-        </div>
-        <div class="defaultLinkTitle">
-          <a href="#"> Cadastre-se <img src="assets/img/arrow-right.svg" /> </a>
         </div>
       </div>
     </section>

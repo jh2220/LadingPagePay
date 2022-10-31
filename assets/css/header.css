@@ -1,10 +1,14 @@
 #mainHeader {
+  position: fixed;
   display: flex;
   justify-content: center;
   background: #ffffff;
   width: 100%;
   border-bottom: 1px solid #cccccc;
   height: 100px;
+  z-index: 3;
+  margin-top: -100px;
+  transition: height 0.3s;
 }
 
 #headerContainer {
@@ -23,27 +27,32 @@
   display: flex;
   list-style: none;
   padding: 0;
+  height: 42px;
 }
 
 #headerContainer > ul > li {
   margin-right: 56px;
+  padding: 0;
 }
 
 #headerContainer > ul > li > a {
   color: #cccccc;
   text-decoration: none;
+  transition: 0.7s;
+  margin: 0;
 }
 
 #headerContainer > ul > li > a > p {
   font-size: 16px;
   margin: 0px;
+  
 }
 
 .tinyText {
+  margin-top: 0;
   font-size: 10px;
 }
 
 #headerContainer > ul > li > a:hover {
   color: #000000;
-  transition: 0.7s;
 }
