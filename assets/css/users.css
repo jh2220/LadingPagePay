@@ -1,0 +1,125 @@
+#users {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+}
+
+#usersTitle {
+  font-size: 47px;
+  color: #1a1a1a;
+  margin: 0 0 40px 0;
+}
+
+#usersCaroselrow {
+  max-width: 1400px;
+  width: 80%;
+}
+
+#usersCaroselrow > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.usersCaroselItem {
+  width: 230px;
+}
+
+.userCaroselImageRow{
+  display: block;
+  width: 230px;
+  overflow: hidden;
+}
+
+
+.userCaroselImageRow > img{
+  display: block;
+  display: none;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.userRedShadow{
+  display: block;
+  position: relative;
+  width: 230px;
+  height: 220px;
+  margin-top: -220px;
+  z-index: 2;
+  background-image: linear-gradient(to top, #99001E, transparent);
+  opacity: 0;
+
+  transition: opacity 0.4s;
+}
+
+.userRedShadow:hover{
+  opacity: 0.8;
+}
+
+.usersCaroselItem > h3 {
+  color: #1a1a1a;
+  font-size: 24px;
+  margin: 32px 0 16px 0;
+  background-color: #ffffff;
+  
+}
+
+.usersCaroselItem > p{
+  color: #4c4c4c;
+  font-size: 18px;
+}
+
+.usersCircleRow{
+  display: flex;
+  justify-content: center;
+  margin-top: 140px;
+}
+
+.usersCircleItem{
+  display: flex;
+  margin: 0 10px;
+  width: 380px;
+  height: 260px;
+}
+
+.userCircleWheelText{
+  width: 260px;
+}
+
+.userCircleWheelText > h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.userCircleWheelText > p {
+  font-size: 18px;
+  color: #4c4c4c;
+}
+
+.circleWheel {
+  margin: 20px;
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.circleWheelInsideText{
+  display: block;
+  position: absolute;
+  font-family : "DM Sans", Bold;
+  text-align: right;
+  font-size: 47px;
+  color: #1a1a1a;
+  font-weight: bold;
+  width: 66px;
+  margin : -44px 0 0 -48px;
+}
+
+.circlePercent{
+  position: absolute;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0px 0 0 4px;
+}
