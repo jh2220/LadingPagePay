@@ -35,7 +35,14 @@ owlCaroseulFunction = () => {
   });
 };
 
+scrollLock = false;
 circleWheelFunction = () => {
+  if (scrollLock == false) {
+    scrollLock = true;
+  } else {
+    return false;
+  }
+
   var circleData = {
     color: "#aaa",
     strokeWidth: 4,
@@ -83,7 +90,7 @@ clickScrollFunction = () => {
     $(`#${clicksScrools[i].from}`).click(function () {
       $([document.documentElement, document.body]).animate(
         {
-          scrollTop: $(`#${clicksScrools[i].to}`).offset().top - 56,
+          scrollTop: $(`#${clicksScrools[i].to}`).offset().top,
         },
         2000
       );
@@ -96,14 +103,14 @@ window.addEventListener("scroll", function () {
   var elementUser = document.querySelector("#usersSection");
   var elementVariation = document.querySelector("#variationSection");
   var elementFooter = document.querySelector("#footer");
+  var elementCircles = document.querySelector("#usersCircleRow");
 
   var positionShowcase = elementShowcase.getBoundingClientRect();
   var positionUser = elementUser.getBoundingClientRect();
   var positionVariation = elementVariation.getBoundingClientRect();
   var positionFooter = elementFooter.getBoundingClientRect();
+  var positionCircles = elementCircles.getBoundingClientRect();
 
-  console.log(positionVariation.bottom >= 0);
-  console.log(positionVariation.top <= 57);
   if (positionShowcase.bottom >= 58) {
     selectMenuColor("menuItemHome");
   } else if ((positionUser.bottom >= 58 && positionUser.top <= 57.9) || false) {
@@ -118,6 +125,13 @@ window.addEventListener("scroll", function () {
     this.document.getElementById("mainHeader").style.height = "56px";
   } else {
     this.document.getElementById("mainHeader").style.height = "100px";
+  }
+
+  if (
+    positionCircles.top <= window.innerHeight &&
+    positionCircles.bottom >= 0
+  ) {
+    circleWheelFunction();
   }
 });
 
@@ -143,6 +157,5 @@ selectMenuColor = (itemSelection) => {
 
 $(document).ready(function () {
   owlCaroseulFunction();
-  circleWheelFunction();
   clickScrollFunction();
 });
