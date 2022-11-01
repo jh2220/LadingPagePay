@@ -10,6 +10,7 @@
   background-image: url("../img/Banner.png");
   height: 860px;
   background-size: cover;
+  transition: background-position 0.3s;
 }
 
 #showcaseApresentation {
@@ -49,6 +50,8 @@
   background-image: url("../img/dotted2.png");
   background-repeat: no-repeat;
   background-position: 0 100%;
+
+  transition: width 0.3s, margin 0.3s;
 }
 
 .showcaseBlackScreen {
@@ -81,4 +84,48 @@
 .showcaseContentText > h2 {
   margin: 0;
   margin-top: 116px;
+}
+
+#showcaseContent > .showcaseContentText{
+  transition: padding 0.3s;
+}
+
+@media screen and (max-width: 1320px) and (min-width: 920px) {
+  
+  #showcaseContent > .showcaseContentText {
+    padding-left: 200px;
+  }
+
+  #showcaseApresentation > img{
+    width: 300px;
+    margin-top: -30px;
+    background-position: 0 400px;
+  }
+
+}
+
+@media screen and (max-width: 920px) {
+
+  #showcaseSection{
+    margin-top: 0;
+  }
+  
+  #showcase{
+    background-position: -400px 0;
+  }
+  
+  #showcaseContent > .showcaseContentText {
+    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #showcaseApresentation > img{
+    display: none;
+  }
+
+  .showcaseContentText{
+    background: none;
+  }
+
 }

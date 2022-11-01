@@ -1,92 +1,248 @@
-#variation{
-    display: flex;
-    justify-content: center;
-    background-image: url("../img/redBox.png");
-    background-position: 100%;
-    background-repeat: no-repeat;
-    background-size: 50% 784px;
+#variation {
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/redBox.png");
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 50% 784px;
 }
 
-#variationRow{
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    max-width: 1200px;
-    width: 100%;
-    background-color: #cd0028;
-    margin-left: 370px;
-    border-radius: 0 0 0 120px;
+#variationRow {
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1400px;
+  width: 1000px;
+  background-color: #cd0028;
+  border-radius: 0 0 0 120px;
+
+  transition: 0.3s;
 }
 
-#variationText{
-    max-width: 1000px;
-    width: 100%;
-    height: 784px;
-    margin-left: 600px;
-}
-
-#variationText h2, #variationText p, #variationText span, #variationText a {
-    margin: 0 0 16px 0;
-    color: #ffffff;
-}
-
-#variationText span{
-    margin: 188px 0 0 0;
+.variationRowContent {
+  display: flex;
+  flex-direction: column;
 }
 
 #variationText > .defaultLinkTitle > a > img {
-   width: 138px;
-   height: auto;
+  width: 138px;
+  height: auto;
 }
 
-#variationPhoneApp{
-    display: block;
-    position: absolute;
-    margin-left: -440px;
-    margin-top: 40px;
-    background-image: url("../img/dotted1.png");
-    background-repeat: no-repeat;
-    background-size: auto 420px;
+#variationText {
+  max-width: 570px;
+  width: 100%;
+  height: 784px;
+  margin-left: 400px;
 }
 
-#variationPhoneDotted{
-    display: block;
-    position: absolute;
-    width: 580px;
-    height: 254px;
-    border-radius: 0 0 0 120px;
-    border: dashed #ffffff 2px;
-    border-top: none;
-    border-right: none;
-    margin-left: -550px;
-    margin-top: 400px;
+#variationText h2,
+#variationText p,
+#variationText span,
+#variationText a {
+  margin: 0 0 16px 0;
+  color: #ffffff;
 }
 
-#variationPhoneCloud{
-    display: block;
-    position: absolute;
-    margin-left: 100px;
-    margin-top: 530px;
-    background-image: url("../img/dotted2.png");
-    background-repeat: no-repeat;
-    background-position: 0 100%;
+#variationText span {
+  margin: 188px 0 0 0;
 }
 
-#variantSubText{
+.variationRowImages {
+  position: absolute;
+}
+
+#variationPhoneApp {
+  position: absolute;
+  margin-left: -1350px;
+  margin-top: 40px;
+  background-image: url("../img/dotted1.png");
+  background-repeat: no-repeat;
+  background-size: auto 420px;
+  z-index: 1;
+  height: 467px;
+
+  transition: height 0.3s;
+}
+
+#variationPhoneDotted {
+  display: block;
+  position: absolute;
+  width: 580px;
+  height: 254px;
+  border-radius: 0 0 0 120px;
+  border: dashed #ffffff 2px;
+  border-top: none;
+  border-right: none;
+  margin-left: -960px;
+  margin-top: 400px;
+  z-index: 0;
+
+  transition: 0.3s;
+}
+
+#variationPhoneCloud {
+  display: block;
+  position: absolute;
+  margin-left: -460px;
+  margin-top: 520px;
+  background-image: url("../img/dotted2.png");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+
+  transition: 0.3s;
+}
+
+#variantSubText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#variantSubTextInfo {
+  max-width: 1200px;
+  width: 100%;
+}
+
+#variantSubTextInfo span {
+  margin: 40px 0 0 0;
+}
+
+@media screen and (max-width: 1700px) and (min-width: 1300px) {
+  #variation {
+    justify-content: flex-end;
+    background-size: 30% 784px;
+  }
+
+  #variationPhoneApp {
+    height: 300px;
+    margin-left: -1150px;
+    background-size: auto 400px;
+  }
+
+  #variationPhoneDotted {
+    margin-left: -850px;
+    margin-top: 250px;
+    width: 300px;
+  }
+
+  #variationPhoneCloud {
+    width: 300px;
+    margin-top: 410px;
+    margin-left: -620px;
+    background-position: 0 300px;
+  }
+
+  #variationText {
+    margin-left: 0;
+  }
+
+  .variationRowContent {
+    margin-top: -110px;
+  }
+
+  #variationRowContent {
+    width: 100px;
+  }
+
+  #variantSubText {
+    margin-left: 40px;
+  }
+
+  #variationRow {
+    width: 900px;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 1299px) and (min-width: 1100px) {
+  #variationRow {
+    width: 750px;
+  }
+
+  #variation {
+    justify-content: flex-end;
+    background-size: 30% 784px;
+  }
+
+  #variationPhoneApp {
+    height: 300px;
+    margin-left: -1100px;
+    background-size: auto 400px;
+  }
+
+  #variationPhoneDotted {
+    margin-left: -700px;
+    margin-top: 250px;
+    width: 300px;
+  }
+
+  #variationPhoneCloud {
+    width: 300px;
+    margin-top: 410px;
+    background-position: 0 300px;
+  }
+
+  #variationText {
+    margin-left: 0;
+  }
+
+  .variationRowContent {
+    margin-top: -110px;
+  }
+
+  #variationRowContent {
+    width: 100px;
+  }
+
+  #variantSubText {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  #variationRow {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-#variantSubTextInfo{
-    max-width: 1200px;
+    padding: 0;
     width: 100%;
-}
+    height: 500px;
+    background-color: #cd0028;
+    border-radius: 0;
+  }
 
-#variantSubTextInfo h2, #variantSubTextInfo p, #variantSubTextInfo span, #variantSubTextInfo a {
-    margin: 0 0 16px 0;
-}
+  #variationRowContent {
+    width: 100px;
+  }
 
-#variantSubTextInfo span{
-    margin: 40px 0 0 0;
+  #variationPhoneApp,
+  #variationPhoneDotted,
+  #variationPhoneCloud {
+    display: none !important;
+  }
+
+  .variationRowContent {
+    margin-top: -110px;
+  }
+
+  .variationRowContent {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  #variationText {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 90%;
+    margin-left: 0;
+  }
+
+  #variationText > .defaultLinkTitle {
+    padding-left: 100px;
+  }
+
+  #variantSubText {
+    margin-left: 40px;
+  }
 }

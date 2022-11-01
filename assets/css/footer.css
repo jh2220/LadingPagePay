@@ -1,150 +1,170 @@
-#footer{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 260px;
+#footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 260px;
 }
 
-#footerBanner{
-    display: flex;
-    width: 100%;
-    height: 140px;
-    align-items: center;
-    justify-content: center;
-    background-color: #cd0028;
-    margin-bottom: 80px;
+#footerBanner {
+  display: flex;
+  width: 100%;
+  height: 140px;
+  align-items: center;
+  justify-content: center;
+  background-color: #cd0028;
+  margin-bottom: 80px;
 }
 
-#footerContact{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    max-width: 1400px;
-    width: 100%;
+#footerContact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1400px;
+  width: 90%;
 }
 
-#footerContactLinks{
-    display: flex;
-    
+#footerContactLinks {
+  display: flex;
 }
 
 #footerContactLinks > ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 80px;
+  list-style: none;
+  padding: 0;
+  margin: 30px;
 }
 
-#footerContactLinks > ul > li > h4{
-    font-size: 24px;
-    color: #1a1a1a;
-    margin: 0 0 16px 0;
+#footerContactLinks > ul > li {
+  margin-bottom: 16px;
+  min-width: 150px;
 }
 
-#footerContactLinks > ul > li{
-    margin-bottom: 16px;
+#footerContactLinks > ul > li > h4 {
+  font-size: 24px;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
 }
 
 #footerContactLinks > ul > li > a {
-    font-size: 18px;
-    color: #4c4c4c;
-    text-decoration: none;
+  font-size: 18px;
+  color: #4c4c4c;
+  text-decoration: none;
 
-    transition: color 0.2s;
+  transition: color 0.2s;
 }
 
-#footerContactLinks > ul > li > a:hover{
-    color: #0180FF;
+#footerContactLinks > ul > li > a:hover {
+  color: #0180ff;
 }
 
 #footerNewsLetter {
-    width: 400px;
-    margin-top: 0;
+  width: 400px;
+  margin-top: 0;
 }
 
-#footerNewsLetter > h4{
-    font-size: 24px;
-    color: #1a1a1a;
-    margin: 0 0 14px 0;
+#footerNewsLetter > h4 {
+  font-size: 24px;
+  color: #1a1a1a;
+  margin: 0 0 14px 0;
 }
 
-.footernewsLetterEmail{
-    margin: 0 0 8px 0;
-    font-weight: 18px;
+.footernewsLetterEmail {
+  margin: 0 0 8px 0;
+  font-weight: 18px;
 }
 
-#footerNewsLetterForm{
-    display: flex;
-    margin-bottom: 24px;
+#footerNewsLetterForm {
+  display: flex;
+  margin-bottom: 24px;
 }
 
-#footerNewsLetterForm > input{
-    border: #90a4ae 1px solid;
-    height: 50px;
-    width: 270px;
-    max-width: 270px;
-    font-size: 16px;
-    padding-left: 20px;
-    outline: none;
-    color: #90a4ae;
+#footerNewsLetterForm > input {
+  border: #90a4ae 1px solid;
+  height: 50px;
+  width: 270px;
+  max-width: 270px;
+  font-size: 16px;
+  padding-left: 20px;
+  outline: none;
+  color: #90a4ae;
 
-    transition: border 0.3s;
+  transition: border 0.3s;
 }
 
-#footerNewsLetterForm > input:focus{
-    border: #0180FF 1px solid;
+#footerNewsLetterForm > input:focus {
+  border: #0180ff 1px solid;
 }
 
-#footerNewsLetterForm > button{
+#footerNewsLetterForm > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #0180ff 2px solid;
+  height: 54px;
+  width: 120px;
+  font-size: 16px;
+  outline: none;
+  margin-left: 8px;
+  background-color: transparent;
+  color: #0180ff;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: background-color 0.5s, color 0.3s;
+}
+
+#footerNewsLetterForm > button:hover {
+  background-color: #0180ff;
+  color: #ffffff;
+}
+
+.footerButtonIcon {
+  margin-left: 4 px;
+  width: 16px;
+  height: 16px;
+}
+
+#footerDownloadApp {
+  margin: 0 0 8px 0;
+}
+
+#footerCopy {
+  display: flex;
+  justify-content: center;
+  min-height: 70px;
+  margin-top: 50px;
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+#footerCopyRow {
+  border-top: 1px solid #90a4ae;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1400px;
+}
+
+#footerCopyRow > p {
+  font-size: 18px;
+  color: #4c4c4c;
+}
+
+@media screen and (max-width: 1170px) {
+  #footerContact {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 652px) {
+  #footerContactLinks {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #footerCopyRow {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border: #0180FF 2px solid;
-    height: 54px;
-    width: 120px;
-    font-size: 16px;
-    outline: none;
-    margin-left: 8px;
-    background-color: transparent;
-    color: #0180FF;
-    font-weight: bold;
-    cursor: pointer;
-
-    transition: background-color 0.5s, color 0.3s;
-}
-
-#footerNewsLetterForm > button:hover{
-    background-color: #0180FF;
-    color: #ffffff;
-}
-
-.footerButtonIcon{
-    margin-left: 4  px;
-    width: 16px;
-    height: 16px;
-}
-
-#footerDownloadApp{
-    margin: 0 0 8px 0;
-}
-
-#footerCopy{
-    display: flex;
-    justify-content: center;
-    height: 70px;
-    margin-top: 50px;
-    width: 100%;
-}
-
-#footerCopyRow{
-    border-top: 1px solid #90a4ae;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1400px;
-}
-
-#footerCopyRow > p{
-    font-size: 18px;
-    color: #4c4c4c;
+    flex-direction: column;
+  }
 }

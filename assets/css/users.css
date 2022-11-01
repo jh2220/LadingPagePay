@@ -32,7 +32,6 @@
   overflow: hidden;
 }
 
-
 .userCaroselImageRow > img{
   display: block;
   display: none;
@@ -73,6 +72,7 @@
 .usersCircleRow{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 140px;
 }
 
@@ -122,4 +122,50 @@
   font-size: 26px;
   font-weight: bold;
   margin: 0px 0 0 4px;
+}
+
+@media screen and (max-width: 649px) {
+
+  .usersCaroselItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .usersCaroselItem > img{
+    width: 230px !important;
+  }
+
+  .usersCaroselItem > p {
+    width: 230px;
+  }
+
+  .usersCaroselItem > h3 {
+    width: 230px;
+  }
+
+}
+
+@media screen and (max-width: 649px) {
+
+  .usersCaroselItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .usersCaroselItem > img{
+    width: 230px !important;
+  }
+
+  .usersCaroselItem > p {
+    width: 230px;
+  }
+
+  .usersCaroselItem > h3 {
+    width: 230px;
+  }
+
 }

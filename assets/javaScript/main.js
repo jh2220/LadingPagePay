@@ -6,7 +6,7 @@ owlCaroseulFunction = () => {
     responsive: {
       0: {
         items: 1,
-        center: false,
+        center: true,
         nav: false,
         loop: false,
       },
@@ -131,7 +131,7 @@ window.addEventListener("scroll", function () {
     positionCircles.top <= window.innerHeight &&
     positionCircles.bottom >= 0
   ) {
-    circleWheelFunction();
+    // circleWheelFunction();
   }
 });
 
@@ -158,4 +158,5 @@ selectMenuColor = (itemSelection) => {
 $(document).ready(function () {
   owlCaroseulFunction();
   clickScrollFunction();
+  circleWheelFunction();
 });
