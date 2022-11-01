@@ -122,16 +122,18 @@ window.addEventListener("scroll", function () {
   }
 
   if (positionShowcase.top <= 10) {
-    this.document.getElementById("mainHeader").style.height = "56px";
+    $('#mainHeader').stop();
+    $('#mainHeader').animate({height: '56px'});
   } else {
-    this.document.getElementById("mainHeader").style.height = "100px";
+    $('#mainHeader').stop();
+    $('#mainHeader').animate({height: '100px'});
   }
 
   if (
     positionCircles.top <= window.innerHeight &&
     positionCircles.bottom >= 0
   ) {
-    // circleWheelFunction();
+    circleWheelFunction();
   }
 });
 
@@ -155,8 +157,26 @@ selectMenuColor = (itemSelection) => {
     : (itemContact.style.color = "#cccccc");
 };
 
+menuHamIsOpen = false;
+
+menuHamburgerFunction = () => {
+  $('.menuHamburgerIcon').click(() => {
+    if(menuHamIsOpen == false){
+      $('.menuHamburgerIcon').css({'color' : '#cd0028'});
+      $('#mainHeader').animate({'right' : '0%'});
+
+      menuHamIsOpen = true;
+    }else{
+      $('.menuHamburgerIcon').css({'color' : '#1a1a1a'});
+      $('#mainHeader').animate({'right' : '100%'});
+
+      menuHamIsOpen = false;
+    }
+  })
+}
+
 $(document).ready(function () {
   owlCaroseulFunction();
   clickScrollFunction();
-  circleWheelFunction();
+  menuHamburgerFunction();
 });

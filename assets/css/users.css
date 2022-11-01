@@ -32,13 +32,6 @@
   overflow: hidden;
 }
 
-.userCaroselImageRow > img{
-  display: block;
-  display: none;
-  opacity: 0.3;
-  z-index: 1;
-}
-
 .userRedShadow{
   display: block;
   position: relative;
