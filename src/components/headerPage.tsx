@@ -1,27 +1,16 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "../styles/HeaderPage.scss";
 import { AiOutlineMenu } from "react-icons/ai";
 import InstitutoPay from "../img/institutoPay.png";
 
-const HeaderPage = () => {
-  const [menuItens, setMenuItens] = useState([
-    {
-      text: "home",
-      onClick: "temp",
-    },
-    {
-      text: "Quem usa?",
-      onClick: "temp",
-    },
-    {
-      text: "Diferenciais",
-      onClick: "temp",
-    },
-    {
-      text: "Contato",
-      onClick: "temp",
-    },
-  ]);
+interface IHeaderPage {
+  menuItens: any,
+  menuHeight: string
+}
+
+const HeaderPage: React.FC<IHeaderPage> = (props) => {
+
+  const { menuItens, menuHeight } = props
 
   const [menuHamburguerIsOpen, setMenuHamburguerIsOpen] = useState(false);
 
@@ -30,6 +19,7 @@ const HeaderPage = () => {
       id="mainHeader"
       style={{
         right: menuHamburguerIsOpen ? "0%" : "100%",
+        height: menuHeight,
       }}
     >
       <div
@@ -37,11 +27,13 @@ const HeaderPage = () => {
         onClick={() => {
           setMenuHamburguerIsOpen(!menuHamburguerIsOpen);
         }}
-        style={{
-          color: menuHamburguerIsOpen ? "0%" : "#1a1a1a",
-        }}
       >
-        <AiOutlineMenu className="menuHamburgerIcon"></AiOutlineMenu>
+        <AiOutlineMenu
+          style={{
+            color: menuHamburguerIsOpen ? "#cd0028" : "#1a1a1a",
+          }}
+          className="menuHamburgerIcon"
+        />
       </div>
 
       <div id="headerContainer">
@@ -50,13 +42,13 @@ const HeaderPage = () => {
         <ul>
           {menuItens.map((menuItens, index) => {
             return (
-              <li>
-                <a href="#showcase" id="menuItemHome">
+              <li onClick={() => { menuItens.click(); setMenuHamburguerIsOpen(!menuHamburguerIsOpen); }}>
+                <div id="menuItemHome" style={{ color: menuItens.color }}>
                   <span className="tinyText">
                     {index > 8 ? index + 1 : `0${index + 1}`}
                   </span>
                   <p>{menuItens.text}</p>
-                </a>
+                </div>
               </li>
             );
           })}

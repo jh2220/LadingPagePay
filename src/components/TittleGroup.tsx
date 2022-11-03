@@ -1,18 +1,22 @@
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
+import PlayStore from '../img/playStore.png';
+import AppleStore from '../img/appleStore.png';
+
 interface ITitleGroup {
   tinyNumber: Number,
-  title: string,
-  tinyText: string,
-  text: string,
-  linkText: string,
-  pathLink: string,
+  title: String,
+  tinyText: String,
+  text: String,
+  linkText: String,
+  pathLink: String,
+  customLink?: Boolean
 }
 
 const TittleGroup: React.FC<ITitleGroup> = (props) => {
 
-  const { tinyNumber, title, tinyText, text, linkText, pathLink } = props;
+  const { tinyNumber, title, tinyText, text, linkText, pathLink, customLink } = props;
 
   return (
     <>
@@ -28,11 +32,25 @@ const TittleGroup: React.FC<ITitleGroup> = (props) => {
           {text}
         </p>
       </div>
-      <div className="defaultLinkTitle">
-        <a href={pathLink}>
-          {linkText} <AiOutlineArrowRight className="defaultLinkArrow" />
-        </a>
-      </div>
+      {customLink ? (
+        <div className="defaultLinkTitle">
+          <a href={pathLink}>
+            {linkText} <AiOutlineArrowRight className="defaultLinkArrow" />
+          </a>
+        </div>
+      ) : (<>
+        <div class="defaultLinkTitle">
+          <a href="#">
+            <img src={PlayStore} />
+          </a>
+          <a href="#">
+            <img src={AppleStore} />
+          </a>
+        </div>
+
+      </>)
+      }
+
     </>
   );
 };

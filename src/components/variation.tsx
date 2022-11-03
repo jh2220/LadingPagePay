@@ -19,8 +19,7 @@ const Variation = () => {
                 title={"Agilidade na mão."}
                 tinyText={"Aplicativo"}
                 text={"Quisque eget velit. Duis vitae semper augue. Orci nulla magna, arcu diam inceptos lupus ut quis nibh eu."}
-                linkText={"Me lembre de trocar!!!"}
-                pathLink={"#"}
+                customLink={false}
               />
             </div>
           </div>
@@ -42,7 +41,9 @@ const Variation = () => {
             text={"Quisque eget velit. Duis vitae semper augue. Orci nulla magna, arcu diam inceptos lupus ut quis nibh eu."}
             linkText={"Cadastre-se"}
             pathLink={"#"}
+            customLink={true}
           />
+
         </div>
       </div>
     </section>

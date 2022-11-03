@@ -27,6 +27,7 @@ const ShowCase = () => {
             text={"Fusce ut porta leo. Sed iaculis lupus augue cursus, sodales euismod vitae porttitor. Suspendisse sed nunc."}
             linkText={"Entre em contato"}
             pathLink={"#"}
+            customLink={true}
           />
         </div>
       </div>
